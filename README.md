@@ -27,7 +27,7 @@ make unload	# run rmmod for the module
 make test	# test the functionality by loading/unloading and displaying the logs
 ```
 
-## Lsit of Modules
+## List of Modules
 
 * **lkm_example** (simple hello world module)
 * **lkm_device** (character device module)
@@ -44,7 +44,7 @@ There may be more details in the README of the directory itself.
 
 ## Authors
 
-* **Philipp van Kempen** - *Only Developer* - [phi.philonata.de](https://phi.philonata.de)
+* **Philipp van Kempen** - *only Developer* - [phi.philonata.de](https://phi.philonata.de)
 
 ## License
 
