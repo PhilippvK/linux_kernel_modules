@@ -15,9 +15,9 @@ test:
 	lsmod | grep -q $(TARGET_MODULE) && sudo rmmod $(TARGET_MODULE).ko || :
 	sudo insmod $(TARGET_MODULE).ko
 	sudo mknod /dev/test-device c `sudo dmesg | grep 'lkm' | grep -o '[0-9]\+' | tail -1` 0
-	timeout 2 cat /dev/test-device > test || :
+	cat /dev/test-device
+	cat /dev/test-device
+	cat /dev/test-device
 	sudo rm /dev/test-device
-	cat test
 	sudo rmmod $(TARGET_MODULE).ko
 	dmesg
-	rm test

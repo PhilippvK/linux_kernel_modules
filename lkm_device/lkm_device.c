@@ -11,7 +11,7 @@ MODULE_VERSION("0.01");
 
 #define DEVICE_NAME "lkm_device"
 #define EXAMPLE_MSG "Hello, World!\n"
-#define MSG_BUFFER_LEN 15
+#define MSG_BUFFER_LEN 64
 
 /* Prototypes for device functions */
 static int device_open(struct inode *, struct file *);
@@ -22,6 +22,8 @@ static int major_num;
 static int device_open_count = 0;
 static char msg_buffer[MSG_BUFFER_LEN];
 static char *msg_ptr;
+
+static int counter = 0;
 
 /* This structure points to all of the device functions */
 static struct file_operations file_ops = {
@@ -34,9 +36,10 @@ static struct file_operations file_ops = {
 /* When a process reads from our device, this gets called. */
 static ssize_t device_read(struct file *flip, char *buffer, size_t len, loff_t *offset) {
  int bytes_read = 0;
- /* If we're at the end, loop back to the beginning */
+ /* If we're at the end, loop back to the beginning -> STOP!*/
  if (*msg_ptr == 0) {
- msg_ptr = msg_buffer;
+// msg_ptr = msg_buffer;
+return 0;
  }
  /* Put data in the buffer */
  while (len && *msg_ptr) {
@@ -63,6 +66,8 @@ static int device_open(struct inode *inode, struct file *file) {
  return -EBUSY;
  }
  device_open_count++;
+ sprintf(msg_buffer,"I already told you %d times Hello world!\n", counter++);
+ msg_ptr = msg_buffer;
  try_module_get(THIS_MODULE);
  return 0;
 }
@@ -77,7 +82,7 @@ static int device_release(struct inode *inode, struct file *file) {
 
 static int __init lkm_device_init(void) {
  /* Fill buffer with our message */
- strncpy(msg_buffer, EXAMPLE_MSG, MSG_BUFFER_LEN);
+ strncpy(msg_buffer, EXAMPLE_MSG, MSG_BUFFER_LEN-1);
  /* Set the msg_ptr to the buffer */
  msg_ptr = msg_buffer;
  /* Try to register character device */
