@@ -34,6 +34,7 @@ make test	# test the functionality by loading/unloading and displaying the logs
 * **lkm_gpio** (using the gpio.h lib with the Raspberry Pi)
 * **lkm_printstats** (calculate the CPU load for a single core)
 * **lkm_loadled** (indicate high CPU loads with a LED)
+* **lkm_helloparam** (parameterized hello world code)
 
 There may be more details in the README of the directory itself.
 
