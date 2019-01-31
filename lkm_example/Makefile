@@ -8,6 +8,8 @@ load:
 	sudo insmod ./$(TARGET_MODULE).ko
 unload:
 	sudo rmmod ./$(TARGET_MODULE).ko
+info:
+	modinfo $(TARGET_MODULE).ko
 test:
 	sudo dmesg -C
 	lsmod | grep -q $(TARGET_MODULE) && sudo rmmod $(TARGET_MODULE).ko || :
