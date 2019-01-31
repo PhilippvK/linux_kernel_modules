@@ -37,6 +37,14 @@ make test	# test the functionality by loading/unloading and displaying the logs
 
 There may be more details in the README of the directory itself.
 
+### Planned Features (TODOs)
+
+* load calculation for multi core processors (support RPi 3B+)
+* Add intermediate CPU clock freqs for Raspberry if possible
+* Try to implement cpufreq_interactive governor on Raspberry Pi's
+* Read CPU and GPU temperature via ioctl
+* Fan control depending on load and temperature
+
 ## Inspirations
 
 * [https://github.com/tleonhardt/linux_lkm/blob/master/README.md](https://github.com/tleonhardt/linux_lkm/blob/master/README.md) - LKM READE and examples
