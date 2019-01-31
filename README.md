@@ -48,6 +48,7 @@ There may be more details in the README of the directory itself.
 ## Inspirations
 
 * [https://github.com/tleonhardt/linux_lkm/blob/master/README.md](https://github.com/tleonhardt/linux_lkm/blob/master/README.md) - LKM READE and examples
+* [https://www.apriorit.com/dev-blog](https://www.apriorit.com/dev-blog) - Tutorials for Device Drivers
 * TODO
 
 ## Authors
