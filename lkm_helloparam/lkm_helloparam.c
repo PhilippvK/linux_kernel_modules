@@ -10,9 +10,11 @@ MODULE_VERSION("0.01");
 
 static int count=1;
 module_param(count,int,0660);
+MODULE_PARM_DESC(count, "Number of times 'Hello {name}!' will be printed");
 
 static char *name = "World";
 module_param(name,charp,0660);
+MODULE_PARM_DESC(name, "Used in printed String");
 
 
 static int __init lkm_helloparam_init(void) {
