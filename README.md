@@ -50,7 +50,7 @@ There may be more details in the README of the directory itself.
 
 * [https://github.com/tleonhardt/linux_lkm/blob/master/README.md](https://github.com/tleonhardt/linux_lkm/blob/master/README.md) - LKM READE and examples
 * [https://www.apriorit.com/dev-blog](https://www.apriorit.com/dev-blog) - Tutorials for Device Drivers
-* TODO
+* [https://blog.fazibear.me/the-beginners-guide-to-linux-kernel-module-raspberry-pi-and-led-matrix-790e8236e8e9](https://blog.fazibear.me/the-beginners-guide-to-linux-kernel-module-raspberry-pi-and-led-matrix-790e8236e8e9) - GPIO.h explained
 
 ## Authors
 
