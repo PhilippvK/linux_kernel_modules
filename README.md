@@ -35,6 +35,8 @@ make test	# test the functionality by loading/unloading and displaying the logs
 * **lkm_printstats** (calculate the CPU load for a single core)
 * **lkm_loadled** (indicate high CPU loads with a LED)
 * **lkm_helloparam** (parameterized hello world code)
+* **lkm_chardevioctl** (test ioctl devices)
+* **lkm_raspberry** (testing raspberry pi fireware calls)
 
 There may be more details in the README of the directory itself.
 
@@ -51,6 +53,7 @@ There may be more details in the README of the directory itself.
 * [https://github.com/tleonhardt/linux_lkm/blob/master/README.md](https://github.com/tleonhardt/linux_lkm/blob/master/README.md) - LKM READE and examples
 * [https://www.apriorit.com/dev-blog](https://www.apriorit.com/dev-blog) - Tutorials for Device Drivers
 * [https://blog.fazibear.me/the-beginners-guide-to-linux-kernel-module-raspberry-pi-and-led-matrix-790e8236e8e9](https://blog.fazibear.me/the-beginners-guide-to-linux-kernel-module-raspberry-pi-and-led-matrix-790e8236e8e9) - GPIO.h explained
+* [TODO](TODO) - TODO 
 
 ## Authors
 
